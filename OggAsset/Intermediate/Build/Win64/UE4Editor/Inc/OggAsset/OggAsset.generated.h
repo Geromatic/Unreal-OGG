@@ -11,31 +11,31 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define OGGASSET_OggAsset_generated_h
 
-#define Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_14_RPC_WRAPPERS
-#define Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_14_RPC_WRAPPERS_NO_PURE_DECLS
-#define Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_14_INCLASS_NO_PURE_DECLS \
+#define Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_16_RPC_WRAPPERS
+#define Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_16_RPC_WRAPPERS_NO_PURE_DECLS
+#define Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_16_INCLASS_NO_PURE_DECLS \
 	private: \
 	static void StaticRegisterNativesUOggAsset(); \
 	friend OGGASSET_API class UClass* Z_Construct_UClass_UOggAsset(); \
 	public: \
-	DECLARE_CLASS(UOggAsset, UObject, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/OggAsset"), NO_API) \
+	DECLARE_CLASS(UOggAsset, USoundWave, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/OggAsset"), NO_API) \
 	DECLARE_SERIALIZER(UOggAsset) \
 	/** Indicates whether the class is compiled into the engine */ \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_14_INCLASS \
+#define Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_16_INCLASS \
 	private: \
 	static void StaticRegisterNativesUOggAsset(); \
 	friend OGGASSET_API class UClass* Z_Construct_UClass_UOggAsset(); \
 	public: \
-	DECLARE_CLASS(UOggAsset, UObject, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/OggAsset"), NO_API) \
+	DECLARE_CLASS(UOggAsset, USoundWave, COMPILED_IN_FLAGS(0), 0, TEXT("/Script/OggAsset"), NO_API) \
 	DECLARE_SERIALIZER(UOggAsset) \
 	/** Indicates whether the class is compiled into the engine */ \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_14_STANDARD_CONSTRUCTORS \
+#define Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_16_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UOggAsset(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UOggAsset) \
@@ -48,7 +48,7 @@ private: \
 public:
 
 
-#define Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_14_ENHANCED_CONSTRUCTORS \
+#define Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_16_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UOggAsset(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -61,26 +61,26 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UOggAsset); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UOggAsset)
 
 
-#define Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_14_PRIVATE_PROPERTY_OFFSET
-#define Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_10_PROLOG
-#define Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_14_GENERATED_BODY_LEGACY \
+#define Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_16_PRIVATE_PROPERTY_OFFSET
+#define Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_12_PROLOG
+#define Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_16_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_14_PRIVATE_PROPERTY_OFFSET \
-	Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_14_RPC_WRAPPERS \
-	Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_14_INCLASS \
-	Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_14_STANDARD_CONSTRUCTORS \
+	Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_16_PRIVATE_PROPERTY_OFFSET \
+	Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_16_RPC_WRAPPERS \
+	Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_16_INCLASS \
+	Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_16_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_14_GENERATED_BODY \
+#define Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_14_PRIVATE_PROPERTY_OFFSET \
-	Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
-	Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_14_INCLASS_NO_PURE_DECLS \
-	Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_14_ENHANCED_CONSTRUCTORS \
+	Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_16_PRIVATE_PROPERTY_OFFSET \
+	Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_16_INCLASS_NO_PURE_DECLS \
+	Chrono_Rhythm_Plugins_OggAsset_Source_OggAsset_Public_OggAsset_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

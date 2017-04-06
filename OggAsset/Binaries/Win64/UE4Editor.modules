@@ -4,7 +4,7 @@
 	"BuildId" : "061ee2a1-1708-49db-bd34-6faec8f81f95",
 	"Modules" : 
 	{
-		"OggAsset" : "UE4Editor-OggAsset.dll",
-		"OggAssetEditor" : "UE4Editor-OggAssetEditor.dll"
+		"OggAsset" : "UE4Editor-OggAsset-9829.dll",
+		"OggAssetEditor" : "UE4Editor-OggAssetEditor-9829.dll"
 	}
 }

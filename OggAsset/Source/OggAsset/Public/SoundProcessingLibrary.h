@@ -25,12 +25,11 @@ public:
 
 	// Function to load a sound file from the HD
 	UFUNCTION(BlueprintCallable, Category = "Ogg")
-	static USoundWave* LoadOggAsset(class UOggAsset* OggAsset);
-	
-	UFUNCTION(BlueprintCallable, Category = "Ogg")
 	static USoundWave* LoadOggFile(const FString& InFilePath);
 	
 	static USoundWave* LoadData(const TArray<uint8>& RawFile);
+
+	static void LoadSoundWave(USoundWave* CompressedSoundWaveRef, const TArray<uint8>& RawFile);
 
 	// Function to fill in the RawFile sound data into the USoundWave object
 	static bool FillSoundWaveInfo(class USoundWave* InSoundWave, TArray<uint8>* InRawFile);

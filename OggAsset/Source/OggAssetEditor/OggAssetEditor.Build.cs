@@ -17,7 +17,7 @@ public class OggAssetEditor : ModuleRules
 			new string[] {
 				"OggAssetEditor/Private",
 				"OggAssetEditor/Private/Factories",
-			}
+            }
 		);
 
 		PrivateDependencyModuleNames.AddRange(

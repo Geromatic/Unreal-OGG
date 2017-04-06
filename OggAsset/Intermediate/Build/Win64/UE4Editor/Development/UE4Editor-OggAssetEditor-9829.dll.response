@@ -1,0 +1,72 @@
+/MANIFEST:NO
+/NOLOGO
+/DEBUG
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/FIXED:No
+/NXCOMPAT
+/STACK:5000000
+/DELAY:UNLOAD
+/DLL
+/PDBALTPATH:%_PDB%
+/OPT:NOREF
+/OPT:NOICF
+/INCREMENTAL:NO
+/ignore:4199
+/ignore:4099
+/DELAYLOAD:"d3d12.dll"
+/NODEFAULTLIB:"LIBCMT"
+/NODEFAULTLIB:"LIBCPMT"
+/NODEFAULTLIB:"LIBCMTD"
+/NODEFAULTLIB:"LIBCPMTD"
+/NODEFAULTLIB:"MSVCRTD"
+/NODEFAULTLIB:"MSVCPRTD"
+/NODEFAULTLIB:"LIBC"
+/NODEFAULTLIB:"LIBCP"
+/NODEFAULTLIB:"LIBCD"
+/NODEFAULTLIB:"LIBCPD"
+"D:\School\Chrono_Rhythm\Plugins\OggAsset\Intermediate\Build\Win64\UE4Editor\Development\OggAssetEditor\Module.OggAssetEditor.cpp.obj"
+"D:\School\Chrono_Rhythm\Plugins\OggAsset\Intermediate\Build\Win64\UE4Editor\Development\OggAssetEditor\OggAssetEditor.generated.cpp.obj"
+"D:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\OggAssetEditor\PCLaunch.rc.res"
+"D:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+"delayimp.lib"
+"wininet.lib"
+"rpcrt4.lib"
+"ws2_32.lib"
+"dbghelp.lib"
+"comctl32.lib"
+"Winmm.lib"
+"kernel32.lib"
+"user32.lib"
+"gdi32.lib"
+"winspool.lib"
+"comdlg32.lib"
+"advapi32.lib"
+"shell32.lib"
+"ole32.lib"
+"oleaut32.lib"
+"uuid.lib"
+"odbc32.lib"
+"odbccp32.lib"
+"netapi32.lib"
+"iphlpapi.lib"
+"setupapi.lib"
+"dwmapi.lib"
+"imm32.lib"
+"D:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-ContentBrowser.lib"
+"D:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Core.lib"
+"D:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoreUObject.lib"
+"D:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-DesktopWidgets.lib"
+"D:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-EditorStyle.lib"
+"D:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Engine.lib"
+"D:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-InputCore.lib"
+"D:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Projects.lib"
+"D:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Slate.lib"
+"D:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-SlateCore.lib"
+"D:\School\Chrono_Rhythm\Plugins\OggAsset\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-OggAsset-9829.lib"
+"D:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-UnrealEd.lib"
+/OUT:"D:\School\Chrono_Rhythm\Plugins\OggAsset\Binaries\Win64\UE4Editor-OggAssetEditor-9829.dll"
+/IMPLIB:"D:\School\Chrono_Rhythm\Plugins\OggAsset\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-OggAssetEditor-9829.suppressed.lib"
+/PDB:"D:\School\Chrono_Rhythm\Plugins\OggAsset\Binaries\Win64\UE4Editor-OggAssetEditor-9829.pdb"
+/ignore:4078

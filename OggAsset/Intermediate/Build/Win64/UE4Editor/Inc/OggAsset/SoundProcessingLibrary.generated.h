@@ -7,7 +7,6 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class USoundWave;
-class UOggAsset;
 #ifdef OGGASSET_SoundProcessingLibrary_generated_h
 #error "SoundProcessingLibrary.generated.h already included, missing '#pragma once' in SoundProcessingLibrary.h"
 #endif
@@ -22,15 +21,6 @@ class UOggAsset;
 		P_NATIVE_BEGIN; \
 		*(USoundWave**)Z_Param__Result=USoundProcessingLibrary::LoadOggFile(Z_Param_InFilePath); \
 		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execLoadOggAsset) \
-	{ \
-		P_GET_OBJECT(UOggAsset,Z_Param_OggAsset); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(USoundWave**)Z_Param__Result=USoundProcessingLibrary::LoadOggAsset(Z_Param_OggAsset); \
-		P_NATIVE_END; \
 	}
 
 
@@ -42,15 +32,6 @@ class UOggAsset;
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
 		*(USoundWave**)Z_Param__Result=USoundProcessingLibrary::LoadOggFile(Z_Param_InFilePath); \
-		P_NATIVE_END; \
-	} \
- \
-	DECLARE_FUNCTION(execLoadOggAsset) \
-	{ \
-		P_GET_OBJECT(UOggAsset,Z_Param_OggAsset); \
-		P_FINISH; \
-		P_NATIVE_BEGIN; \
-		*(USoundWave**)Z_Param__Result=USoundProcessingLibrary::LoadOggAsset(Z_Param_OggAsset); \
 		P_NATIVE_END; \
 	}
 

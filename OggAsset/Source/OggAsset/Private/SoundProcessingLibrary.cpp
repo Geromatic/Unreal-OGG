@@ -12,14 +12,6 @@
 
 /// Functions to load Data from the HardDrive
 
-USoundWave* USoundProcessingLibrary::LoadOggAsset(UOggAsset* OggAsset)
-{
-	if (!OggAsset)
-		return nullptr;
-
-	return USoundProcessingLibrary::LoadData(OggAsset->Data);
-}
-
 USoundWave* USoundProcessingLibrary::LoadOggFile(const FString& InFilePath)
 {
 		// TArray that holds the binary and encoded Sound data
@@ -75,6 +67,43 @@ USoundWave* USoundProcessingLibrary::LoadData(const TArray<uint8>& RawFile)
 	BulkData->Unlock();
 
 	return CompressedSoundWaveRef;
+}
+
+void USoundProcessingLibrary::LoadSoundWave(USoundWave* CompressedSoundWaveRef, const TArray<uint8>& RawFile)
+{
+	// Make sure the SoundWave Object is Valid
+	if (!CompressedSoundWaveRef) {
+
+		PrintError(TEXT("Failed to create new SoundWave Object!"));
+		return;
+	}
+
+	// Fill the SoundData into the SoundWave Object
+	if (RawFile.Num() > 0) {
+
+		if (!FillSoundWaveInfo(CompressedSoundWaveRef, (TArray<uint8>*)&RawFile)) {
+
+			PrintError(TEXT("Something went wrong while loading the Sound Data!"));
+			return;
+		}
+	}
+	else {
+
+		PrintError(TEXT("RawFile Array is empty! Seams like Sound couldn't be loaded correctly."));
+		return;
+	}
+
+	// Get Pointer to the Compressed OGG Data
+	FByteBulkData* BulkData = &CompressedSoundWaveRef->CompressedFormatData.GetFormat(FName("OGG"));
+
+	// Set the Lock of the BulkData to ReadWrite
+	BulkData->Lock(LOCK_READ_WRITE);
+
+	// Copy compressed RawFile Data to the Address of the OGG Data of the SW File
+	FMemory::Memmove(BulkData->Realloc(RawFile.Num()), RawFile.GetData(), RawFile.Num());
+
+	// Unlock the BulkData again
+	BulkData->Unlock();
 }
 
 

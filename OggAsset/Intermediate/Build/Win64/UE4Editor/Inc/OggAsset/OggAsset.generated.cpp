@@ -14,22 +14,20 @@ void EmptyLinkFunctionForGeneratedCode1OggAsset() {}
 	void UOggAsset::StaticRegisterNativesUOggAsset()
 	{
 	}
-	IMPLEMENT_CLASS(UOggAsset, 3742707714);
+	IMPLEMENT_CLASS(UOggAsset, 1284495428);
 	void USoundProcessingLibrary::StaticRegisterNativesUSoundProcessingLibrary()
 	{
-		FNativeFunctionRegistrar::RegisterFunction(USoundProcessingLibrary::StaticClass(), "LoadOggAsset",(Native)&USoundProcessingLibrary::execLoadOggAsset);
 		FNativeFunctionRegistrar::RegisterFunction(USoundProcessingLibrary::StaticClass(), "LoadOggFile",(Native)&USoundProcessingLibrary::execLoadOggFile);
 	}
-	IMPLEMENT_CLASS(USoundProcessingLibrary, 3679204515);
+	IMPLEMENT_CLASS(USoundProcessingLibrary, 2202392694);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
-	COREUOBJECT_API class UClass* Z_Construct_UClass_UObject();
+	ENGINE_API class UClass* Z_Construct_UClass_USoundWave();
 	ENGINE_API class UClass* Z_Construct_UClass_USoundWave_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_UBlueprintFunctionLibrary();
 
 	OGGASSET_API class UClass* Z_Construct_UClass_UOggAsset_NoRegister();
 	OGGASSET_API class UClass* Z_Construct_UClass_UOggAsset();
-	OGGASSET_API class UFunction* Z_Construct_UFunction_USoundProcessingLibrary_LoadOggAsset();
 	OGGASSET_API class UFunction* Z_Construct_UFunction_USoundProcessingLibrary_LoadOggFile();
 	OGGASSET_API class UClass* Z_Construct_UClass_USoundProcessingLibrary_NoRegister();
 	OGGASSET_API class UClass* Z_Construct_UClass_USoundProcessingLibrary();
@@ -43,13 +41,13 @@ void EmptyLinkFunctionForGeneratedCode1OggAsset() {}
 		static UClass* OuterClass = NULL;
 		if (!OuterClass)
 		{
-			Z_Construct_UClass_UObject();
+			Z_Construct_UClass_USoundWave();
 			Z_Construct_UPackage__Script_OggAsset();
 			OuterClass = UOggAsset::StaticClass();
 			if (!(OuterClass->ClassFlags & CLASS_Constructed))
 			{
 				UObjectForceRegistration(OuterClass);
-				OuterClass->ClassFlags |= 0x20100080;
+				OuterClass->ClassFlags |= 0x20901080;
 
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
@@ -60,7 +58,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 #if WITH_METADATA
 				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
 				MetaData->SetValue(OuterClass, TEXT("BlueprintType"), TEXT("true"));
-				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("Object"));
+				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("Object Object Object"));
 				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("OggAsset.h"));
 				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("Public/OggAsset.h"));
 				MetaData->SetValue(OuterClass, TEXT("ToolTip"), TEXT("Implements an asset that can be used to store an Ogg file"));
@@ -75,31 +73,6 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UOggAsset(Z_Construct_UClass_UOggAsset, &UOggAsset::StaticClass, TEXT("UOggAsset"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UOggAsset);
-	UFunction* Z_Construct_UFunction_USoundProcessingLibrary_LoadOggAsset()
-	{
-		struct SoundProcessingLibrary_eventLoadOggAsset_Parms
-		{
-			UOggAsset* OggAsset;
-			USoundWave* ReturnValue;
-		};
-		UObject* Outer=Z_Construct_UClass_USoundProcessingLibrary();
-		static UFunction* ReturnFunction = NULL;
-		if (!ReturnFunction)
-		{
-			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("LoadOggAsset"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x04022401, 65535, sizeof(SoundProcessingLibrary_eventLoadOggAsset_Parms));
-			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(ReturnValue, SoundProcessingLibrary_eventLoadOggAsset_Parms), 0x0010000000000580, Z_Construct_UClass_USoundWave_NoRegister());
-			UProperty* NewProp_OggAsset = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("OggAsset"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(OggAsset, SoundProcessingLibrary_eventLoadOggAsset_Parms), 0x0010000000000080, Z_Construct_UClass_UOggAsset_NoRegister());
-			ReturnFunction->Bind();
-			ReturnFunction->StaticLink();
-#if WITH_METADATA
-			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
-			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Ogg"));
-			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("Public/SoundProcessingLibrary.h"));
-			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("Function to load a sound file from the HD"));
-#endif
-		}
-		return ReturnFunction;
-	}
 	UFunction* Z_Construct_UFunction_USoundProcessingLibrary_LoadOggFile()
 	{
 		struct SoundProcessingLibrary_eventLoadOggFile_Parms
@@ -120,6 +93,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
 			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Ogg"));
 			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("Public/SoundProcessingLibrary.h"));
+			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("Function to load a sound file from the HD"));
 			MetaData->SetValue(NewProp_InFilePath, TEXT("NativeConst"), TEXT(""));
 #endif
 		}
@@ -142,11 +116,9 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 				UObjectForceRegistration(OuterClass);
 				OuterClass->ClassFlags |= 0x20100080;
 
-				OuterClass->LinkChild(Z_Construct_UFunction_USoundProcessingLibrary_LoadOggAsset());
 				OuterClass->LinkChild(Z_Construct_UFunction_USoundProcessingLibrary_LoadOggFile());
 
-				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_USoundProcessingLibrary_LoadOggAsset(), "LoadOggAsset"); // 674671566
-				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_USoundProcessingLibrary_LoadOggFile(), "LoadOggFile"); // 2235888049
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_USoundProcessingLibrary_LoadOggFile(), "LoadOggFile"); // 2239420018
 				OuterClass->StaticLink();
 #if WITH_METADATA
 				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
@@ -168,8 +140,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/OggAsset")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x9C2E3DA6;
-			Guid.B = 0x37BEED00;
+			Guid.A = 0xCB9EB533;
+			Guid.B = 0xE4A85E7E;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

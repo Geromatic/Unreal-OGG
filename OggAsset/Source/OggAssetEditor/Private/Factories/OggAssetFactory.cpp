@@ -3,6 +3,8 @@
 #include "OggAssetEditorPrivatePCH.h"
 #include "OggAssetFactory.h"
 
+#include "../OggAsset/Public/SoundProcessingLibrary.h"
+
 
 /* UOggAssetFactory structors
  *****************************************************************************/
@@ -11,9 +13,10 @@ UOggAssetFactory::UOggAssetFactory( const FObjectInitializer& ObjectInitializer 
 	: Super(ObjectInitializer)
 {
 	Formats.Add(FString(TEXT("ogg;")) + NSLOCTEXT("UOggAssetFactory", "Sound", "OGG File").ToString());
-	SupportedClass = UOggAsset::StaticClass();
+	SupportedClass = USoundWave::StaticClass();
 	bCreateNew = false;
 	bEditorImport = true;
+
 }
 
 
@@ -27,8 +30,8 @@ UObject* UOggAssetFactory::FactoryCreateBinary(UClass* Class, UObject* InParent,
 
 	if (FFileHelper::LoadFileToArray(data, *CurrentFilename))
 	{
-
-		OggAsset = NewObject<UOggAsset>(InParent, Class, Name, Flags);
+		OggAsset = NewObject<UOggAsset>(InParent, Name, Flags);
+		USoundProcessingLibrary::LoadSoundWave(OggAsset, data);
 		OggAsset->Data = data;
 	}
 

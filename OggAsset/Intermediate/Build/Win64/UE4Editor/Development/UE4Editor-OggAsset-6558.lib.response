@@ -1,0 +1,22 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-OggAsset-6558.dll"
+/IGNORE:4221
+/NODEFAULTLIB:"LIBCMT"
+/NODEFAULTLIB:"LIBCPMT"
+/NODEFAULTLIB:"LIBCMTD"
+/NODEFAULTLIB:"LIBCPMTD"
+/NODEFAULTLIB:"MSVCRTD"
+/NODEFAULTLIB:"MSVCPRTD"
+/NODEFAULTLIB:"LIBC"
+/NODEFAULTLIB:"LIBCP"
+/NODEFAULTLIB:"LIBCD"
+/NODEFAULTLIB:"LIBCPD"
+"D:\School\Chrono_Rhythm\Plugins\OggAsset\Intermediate\Build\Win64\UE4Editor\Development\OggAsset\Module.OggAsset.cpp.obj"
+"D:\School\Chrono_Rhythm\Plugins\OggAsset\Intermediate\Build\Win64\UE4Editor\Development\OggAsset\OggAsset.generated.cpp.obj"
+"D:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\OggAsset\PCLaunch.rc.res"
+"D:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"D:\School\Chrono_Rhythm\Plugins\OggAsset\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-OggAsset-6558.lib"
