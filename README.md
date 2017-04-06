@@ -2,3 +2,5 @@
 Allows importing and playing OGG files In UE4
 
 Imports the file just like when you import a wav file
+
+binary files are in 4.15
