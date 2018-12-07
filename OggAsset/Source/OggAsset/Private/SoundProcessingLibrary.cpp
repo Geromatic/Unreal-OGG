@@ -74,6 +74,7 @@ USoundWave* USoundProcessingLibrary::LoadData(const TArray<uint8>& RawFile)
 	// Unlock the BulkData again
 	BulkData->Unlock();
 
+	CompressedSoundWaveRef->SetPrecacheState(ESoundWavePrecacheState::Done);
 	return CompressedSoundWaveRef;
 }
 
